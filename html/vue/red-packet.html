@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>红包雨</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimun-scale=1, user-scalable=no, viewport-fit=cover">
+	<link rel="stylesheet" type="text/css" href="../../dist/css/red-packet.css">
+</head>
+<body>
+	<canvas class="active-smile" id="canvas-box" width="150" height="150"></canvas>
+	<p class="active-desc">在想什么呢？想看会动画吗？点击按钮一起来看看吧！</p>
+	<button class="active-btn">start running</button>
+	<div class="red-receive hide">
+		<img class="red-receive__icon" src="../../dist/image/receive-icon.png">
+	  <div class="red-receive__num">
+	    <img class="red-receive__num--icon icon_5 hide" src="../../dist/image/icon-5.png" />
+	    <img class="red-receive__num--icon icon_4 hide" src="../../dist/image/icon-4.png" />
+	    <img class="red-receive__num--icon icon_3 hide" src="../../dist/image/icon-3.png" />
+	    <img class="red-receive__num--icon icon_2 hide" src="../../dist/image/icon-2.png" />
+	    <img class="red-receive__num--icon icon_1 hide" src="../../dist/image/icon-1.png" />
+	  </div>
+	  <div class="rain-pop hide">
+	    <div class="rain-pop__time">剩余<span class="rain-pop__time--num">20</span>秒</div>
+	  </div>
+	   <!-- 未中奖/中奖  -->
+	  <div class="rain-pop__noWining hide">
+	    <div class="rain-pop__noWining--content">
+	    	<img class="rain-pop__noWining--content--icon"/>
+	      <button class="rain-pop__noWining--content--btn vote_btn hide">去领取</button>
+	      <button class="rain-pop__noWining--content--btn take_one hide">再抢一次</button>
+	    </div>
+	  </div>
+	</div>
+	<p class="active-careful">亲，此页面请用手机模式查看哦</p>
+
+  <script type="text/javascript" src="../../dist/jquery/js/jquery.js"></script>
+  <script type="text/javascript" src="../../dist/jquery/js/rain.js"></script>
+  <script type="text/javascript" src="../../dist/js/vue-component/red-packet.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="Language/Lang.js"></script>
+ </head>
+ <body>
+  多语言切换框架
+  <li>
+	支持url、扩展文件、cookie、配置文件（优先级递减）四种方式进行多语言切换。
+  </li>
+  <li>
+	支持从url中获取内容（开启直接返回语言编号，不开启请返回none）
+  </li>
+  <li>
+	支持语言库模块化，在加载了locale、您可以设置还需要加载的语言库模块
+  </li>
+  <br/>
+  ------------------------------
+  <br/>
+  正常加载如下：<span id="app_1"></span><br/>
+  模块加载如下：<span id="module_1"></span>
+  <script>
+	autoBindView();
+  </script>
+ </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">  
+<HTML>  
+ <HEAD>  
+  <TITLE> Send Email </TITLE>  
+  <META NAME="Generator" CONTENT="EditPlus">  
+  <META NAME="Author" CONTENT="">  
+  <META NAME="Keywords" CONTENT="">  
+  <META NAME="Description" CONTENT="">  
+ </HEAD>  
+<script>  
+Date.prototype.toString=function()  
+{  
+    var d = new Date();  
+    var ret = d.getYear();  
+    var m = d.getMonth()+1;  
+    ret+=m.length>1?m:'0'+m;  
+    var date= d.getDate();  
+    ret+=date.length>1?date:'0'+date;  
+    return ret;      
+}  
+var initSubject='test'+new Date().toString(),initTo='sample@163.com',initCC='sample@hotmail.com',initBody='use mailto sample';  
+  
+function submitHandler()  
+{  
+    var subject = subText.value;  
+    var to = toText.value;  
+    var cc = ccText.value;  
+    var body = bodyText.value;  
+    mailTo.href="mailto:"+to+"?cc="+cc+"&subject="+subject+"&body="+body;  
+    mailTo.click();  
+}  
+function init()  
+{  
+    subText.value=initSubject;  
+    toText.value=initTo;  
+    ccText.value=initCC;  
+    bodyText.value=initBody;  
+}  
+</script>  
+<style>  
+.label{font-weight:bold;postion:absolute;width:80px;}  
+.head{font-color:black;font-weight:bold;}  
+.bd{float:left;width:77px;font-weight:bold;}  
+</style>  
+ <BODY onload="init()">  
+ <div class="head">Use mailto Send Email</div>  
+ <div>  
+ <span class="label">Subject:</span><input id="subText" type="text" size=50 value="TM V14.2 Bug Fix Questions_20080221">  
+ </div>  
+ <div>  
+ <span class="label">To:</span><input id="toText" type="text" size=50 value="">  
+ </div>  
+ <div>  
+ <span class="label">CC:</span><input id="ccText" type="text" size=50 value="">  
+ </div>  
+ <div>  
+ <span class="bd">Body:</span><textarea id="bodyText" rows=20 cols=100></textarea>  
+  </div>  
+ <input name="btSend" type="button" value="send email" onclick="submitHandler();">  
+ <a href="mailto:" id="mailTo"></a>  
+ </BODY>  
+</HTML>  
